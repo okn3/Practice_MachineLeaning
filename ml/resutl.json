@@ -1,0 +1,3 @@
+{u'url': u'https://pbs.twimg.com/media/B7tFyRCCYAA33Is.jpg', u'face_detection': [{u'confidence': 1, u'beauty': 0.99603, u'age': 22.13, u'pose': {u'yaw': -36.86, u'roll': -4.58, u'pitch': -11.29}, u'boundingbox': {u'tl': {u'y': 90.77, u'x': 370.77}, u'size': {u'width': 162.31, u'height': 162.31}}, u'quality': {u'brn': 0.51, u'shn': 1.3}}], u'ori_img_size': {u'width': 600, u'height': 473}, u'usage': {u'status': u'Succeed.', u'quota': 4963, u'api_id': u'mdJOxGSyeVnL43er'}}
+22.13
+0.99603
