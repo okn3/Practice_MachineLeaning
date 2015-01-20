@@ -1,28 +1,20 @@
 # coding: utf-8
 import math, csv
 
-
 data = []
 
 f = open("score.csv","r")
 f_line = f.readlines()
 for d_line in f_line:
     a = d_line.split(",")[2]
-    data.append(a)
+    data.append(float(a))
 f.close
 
-print data
-print num
-
 num = len(data)
-#num = int(input())
-#data = []
+print "original data\n",data #debag
+#print num #debag
 
 _sum = 0
-for i in range(num):
-    ipt = int(input())
-    data.append(ipt)
-    _sum += ipt
 average = _sum/num
 
 subtraction = []
