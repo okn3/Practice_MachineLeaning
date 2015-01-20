@@ -12,7 +12,6 @@ emtion_sum = 0
 a = 0 
 line = "============================="
 f = open('score.csv', 'a')
-#writer = csv.writer(file(f, 'w'))
 writer = csv.writer(f)
 
 print line
@@ -41,7 +40,7 @@ for key in root[u'face_detection']:
     age_sum += key[u'age']
     a += 1
 
-print "===========Score==========="
+print "============Score============"
 print "グループ名",group_name
 print "メンバー:", a, "人"
 print "顔面偏差値:",str.format('{0:.1f}', beauty_sum/a),"point"
