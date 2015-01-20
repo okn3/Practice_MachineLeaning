@@ -11,6 +11,21 @@ age_sum = 0
 emtion_sum = 0
 a = 0 
 line = "============================="
+
+"""ジャンル指定プログラム
+genre = input("指定なし:0 ミスコン:1 ミスター:2 サークル:3 >")
+if genre == 0:
+    f = open('score.csv', 'a')
+elif genre == 1:
+    f = open('misscon.csv', 'a')
+elif genre == 2:
+    f = open('mister.csv', 'a')
+elif genre == 3:
+    f = open('circle.csv', 'a')
+else:
+    print "select error"
+"""
+
 f = open('score.csv', 'a')
 writer = csv.writer(f)
 
@@ -43,10 +58,12 @@ for key in root[u'face_detection']:
 print "============Score============"
 print "グループ名",group_name
 print "メンバー:", a, "人"
-print "顔面偏差値:",str.format('{0:.1f}', beauty_sum/a),"point"
+print "顔面評価:",str.format('{0:.1f}', beauty_sum/a),"point"
 print "平均年齢:",str.format('{0:.1f}', age_sum/a)
 print line
 writer.writerow([group_name,a,int(beauty_sum/a),int(age_sum/a)])
-#print(root[u'face_detection'][i])#年齢を表示
+f.flush()
+f.close
 
-f.close()
+os.system("python t-score.py") #よろしくない
+

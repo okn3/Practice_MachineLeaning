@@ -2,8 +2,7 @@
 import math, csv
 
 data = []
-
-input_data = input("スコア手動入力 >")
+#input_data = input("スコア手動入力 >")
 
 f = open("score.csv","r")
 f_line = f.readlines()
@@ -12,11 +11,11 @@ for d_line in f_line:
     data.append(float(a))
 f.close
 
-data.append(input_data)
+#data.append(input_data)
 
 num = len(data)
 print "original data\n",data #debag
-print num #debag
+#print num #debag
 
 _sum = 0
 average = _sum/num
@@ -38,7 +37,9 @@ if standerd_deviation == 0:
     print "all 50"
 else:
     for p in subtraction:
-        devitaion = 50 + p * 10.0 / float(standerd_deviation)
-        print "%d" % devitaion
-    print "あなたの結果:",devitaion
+        deviation = 50 + p * 10.0 / float(standerd_deviation)
+        print "%d" % deviation
+print "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+print "このグループの平均顔面偏差値 : [ %d ]" % deviation
+print "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
 
