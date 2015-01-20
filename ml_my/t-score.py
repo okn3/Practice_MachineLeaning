@@ -1,7 +1,22 @@
 # coding: utf-8
-import math
-num = int(input())
+import math, csv
+
+
 data = []
+
+f = open("score.csv","r")
+f_line = f.readlines()
+for d_line in f_line:
+    a = d_line.split(",")[2]
+    data.append(a)
+f.close
+
+print data
+print num
+
+num = len(data)
+#num = int(input())
+#data = []
 
 _sum = 0
 for i in range(num):
