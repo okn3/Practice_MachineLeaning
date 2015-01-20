@@ -13,7 +13,7 @@ pic_url = raw_input("Input image URL >") #画像のURLを入力
 target = raw_input("human:0 or things:1 >") #解析多少の選択
 
 if target == "0" or target == "human" :
-    jobs = raw_input("select face+[part,age,gender,beauty,race,motion,glass] \n EXAMPLE: face_age_beauty \n >") #分析項目の選択
+    jobs = raw_input("select face+[part,age,gender,beauty,race,emotion,glass] \n EXAMPLE: face_age_beauty \n >") #分析項目の選択
 elif target == "1" or target == "things" : 
     jobs = 'scene_understanding_3'
 else:
