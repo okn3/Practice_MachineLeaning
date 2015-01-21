@@ -2,13 +2,12 @@
 import math, csv
 
 data = []
-#input_data = input("スコア手動入力 >")
 def calcTscore():
     f = open("score.csv","r")
     f_line = f.readlines()
     for d_line in f_line:
         a = d_line.split(",")[2]
-        data.append(float(a))
+        data.append(int(a))
     f.close
 
     num = len(data)
