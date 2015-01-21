@@ -17,8 +17,9 @@ num = len(data)
 print "original data\n",data #debag
 #print num #debag
 
-_sum = 0
+_sum = sum(data)
 average = _sum/num
+print "score平均", average #debug
 
 subtraction = []
 for p in data:
@@ -38,7 +39,7 @@ if standerd_deviation == 0:
 else:
     for p in subtraction:
         deviation = 50 + p * 10.0 / float(standerd_deviation)
-        print "%d" % deviation
+#        print "%d" % deviation
 print "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
 print "このグループの平均顔面偏差値 : [ %d ]" % deviation
 print "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
