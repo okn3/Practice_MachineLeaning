@@ -5,6 +5,7 @@
 #
 ##########################
 import json, urllib2, os, csv
+import moduleTscore as tm
 
 beauty_sum = 0
 age_sum = 0
@@ -65,5 +66,9 @@ writer.writerow([group_name,a,int(beauty_sum/a),int(age_sum/a)])
 f.flush()
 f.close
 
-os.system("python t-score.py") #よろしくない
+ts = tm.calcTscore()
 
+print "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+print "このグループの平均顔面偏差値 : [ %d ]" % ts
+print "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+ 
