@@ -3,7 +3,7 @@ import math, csv
 
 data = []
 def calcTscore():
-    f = open("score.csv","r")
+    f = open("test.csv","r") #変更した
     f_line = f.readlines()
     for d_line in f_line:
         a = d_line.split(",")[2]

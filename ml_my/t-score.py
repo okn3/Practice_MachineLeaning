@@ -4,7 +4,7 @@ import math, csv
 data = []
 #input_data = input("スコア手動入力 >")
 
-f = open("score.csv","r")
+f = open("test.csv","r")
 f_line = f.readlines()
 for d_line in f_line:
     a = d_line.split(",")[2]

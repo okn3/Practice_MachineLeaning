@@ -4,6 +4,8 @@ import urllib
 import BeautifulSoup
 import sys
 
+import createFaceDB
+
 link_data = []
 def getLink():
     #url = sys.argv[1]
@@ -27,7 +29,8 @@ def getImageUrl(link):
     soup = BeautifulSoup.BeautifulSoup(html)
     data = soup.find(id="contest_key_visual")
     for img_url in data.findAll('img'):
-        print url[:20] + img_url.get('src')
-
+        miss_img = url[:20] + img_url.get('src')
+        print miss_img
+        createFaceDB.createDB(miss_img,"test")        
 #getImageUrl()
 getLink()
