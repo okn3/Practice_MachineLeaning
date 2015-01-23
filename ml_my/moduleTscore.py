@@ -3,7 +3,8 @@ import math, csv
 
 data = []
 def calcTscore():
-    f = open("test.csv","r") #変更した
+    #f = open("score.csv","r") #修正
+    f = open("test.csv","r") #修正
     f_line = f.readlines()
     for d_line in f_line:
         a = d_line.split(",")[2]
@@ -32,7 +33,7 @@ def calcTscore():
     else:
         for p in subtraction:
             deviation = 50 + p * 10.0 / float(standerd_deviation)
-    #        print "%d" % deviation
+            print "%d" % deviation
     return deviation
 
 
