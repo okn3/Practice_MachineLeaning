@@ -7,6 +7,8 @@ import sys
 import createFaceDB
 
 link_data = []
+file_name = "miss.csv"
+
 def getLink():
     #url = sys.argv[1]
 #    url = raw_input("URL >")
@@ -32,6 +34,6 @@ def getImageUrl(links,title):
     data = soup.find(id="contest_key_visual")
     for img_url in data.findAll('img'):
         miss_img = url[:20] + img_url.get('src')
-        createFaceDB.createDB(miss_img,name)        
-#getImageUrl()
+        createFaceDB.createDB(miss_img,name,file_name)        
+
 getLink()

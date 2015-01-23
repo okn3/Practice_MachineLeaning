@@ -7,16 +7,16 @@
 import json, urllib2, os, csv
 import moduleTscore as tm
 
-def createDB(miss_img,name):
+def createDB(miss_img,name,file_name):
 
     beauty_sum = 0
     age_sum = 0
     emtion_sum = 0
     a = 0 
     line = "============================="
-
+    
     #f = open('score.csv', 'a')
-    f = open('test.csv', 'a')
+    f = open(file_name, 'a')
     writer = csv.writer(f)
 
     print line
@@ -56,10 +56,3 @@ def createDB(miss_img,name):
     writer.writerow([group_name,a,int(beauty_sum/a),int(age_sum/a),pic_url])
     f.flush()
     f.close
-
-#    ts = tm.calcTscore()
-
-#    print "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
-#    print "このグループの平均顔面偏差値 : [ %d ]" % ts
-#    print "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
- 
